@@ -1,4 +1,11 @@
-import React from 'react'
+import React from 'react';
+import styled from 'styled-components'
+
+const Title = styled.h1`
+  font-size: 3em;
+  color: red;
+`
+
 
 function MovieDisplay({movie}){
 
@@ -8,7 +15,7 @@ function MovieDisplay({movie}){
 <>
   
     
-<h1>{movie.Title}</h1>
+<Title>{movie.Title}</Title>
 <h2>{movie.Genre}</h2>
 <img src={movie.Poster} alt={movie.Title} />
 <h2>{movie.Year}</h2>
