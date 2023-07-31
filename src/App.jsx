@@ -2,6 +2,15 @@
 import Form from './component/Form'
 import MovieDisplay from './component/MovieDisplay'
 import{useState,useEffect} from 'react'
+import styled from "styled-components"
+
+const Container = styled.div`
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  // background-color: #242424
+`;
+
 
 function App() {
   
@@ -24,10 +33,16 @@ useEffect(()=> {
 
 }, [])
   return (
-    <>
-     <Form movieSearch={getMovie}/>
-     <MovieDisplay movie={movie}/>
-    </>
+    
+    
+      <Container>
+        {/* Passing the function to Form as a prop and calling it movieSearch */}
+        <Form movieSearch={getMovie} />
+        <MovieDisplay movie={movie} />
+      </Container>
+    
+     
+   
   )
 }
 

@@ -1,33 +1,42 @@
-import React from 'react';
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
+
 
 const Title = styled.h1`
-  font-size: 3em;
-  color: red;
+  font-size: 5em;
+`;
+
+const Image = styled.img
 `
 
+height : 900px;
+width : 800px;
 
-function MovieDisplay({movie}){
+`
+const Genre = styled.h3
+`
+font-size: 15em;
+color : red;
 
-    const loaded = () => {
-        return(
-    
-<>
-  
-    
-<Title>{movie.Title}</Title>
-<h2>{movie.Genre}</h2>
-<img src={movie.Poster} alt={movie.Title} />
-<h2>{movie.Year}</h2>
-</>
+`
 
-);
-};
-    const loading = ()=> {
-        return <h1>No Movie to Display</h1>
-    }
-    return movie? loaded() : loading()
-  
+function MovieDisplay({ movie }) {
+  const loaded = () => {
+    return (
+      <>
+        <Title>{movie.Title}</Title>
+        <Image src={movie.Poster} alt={movie.Title} />
+        <h3>{movie.Genre}</h3>
+        <h3>{movie.Year}</h3>
+      </>
+    );
+  };
+
+  const loading = () => {
+    return <h1>No movie to display</h1>;
+  };
+
+  return movie ? loaded() : loading();
 }
 
-export default MovieDisplay
+export default MovieDisplay;
