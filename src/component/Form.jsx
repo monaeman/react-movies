@@ -5,7 +5,16 @@ import styled, { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
   body {
-    background-color: pink; 
+    background-image: url("https://kettleheroes.com/wp-content/uploads/2022/02/Why-is-Popcorn-a-Movie-Food.jpg"); 
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    height: 100%; /* Set the desired height of the background */
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    justify-content: right;
+  
   }
 `;
 
@@ -18,8 +27,9 @@ const FormContainer = styled.div`
   max-width: 700px;
   margin: 0 auto;
   margin-top: 50px;
-  background-color: red;
+ 
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
  
   
   
@@ -31,6 +41,7 @@ const FormContainer = styled.div`
     border: 2px solid #ccc;
     border-radius: 10px;
     margin: 10px 0;
+    
   }
 
 
@@ -47,21 +58,22 @@ const FormContainer = styled.div`
 
 
 const Title = styled.h1`
-  font-size: 50px;
+  font-size: 80px;
   margin-bottom: 5px;
   text-align: center;
-  background-color: red;
+  
 `;
 
 const SubmitButton = styled.input`
   padding: 10px 20px;
-  background-color: blue;
+  background-color: black;
   color: #fff;
   border: none;
   cursor: pointer;
   width : 40%;
-  font-size: 50px;
+  font-size: 35px;
   border-radius: 7%;
+  align-item: center;
 
 `;
 
